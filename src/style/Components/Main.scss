@@ -1,0 +1,140 @@
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+
+    .main {
+        height: 100%;
+        width: 100%;
+        @include verticalCenter;
+
+        .mainContainer {
+            width: 30%;
+            height: 75%;
+
+            .header {
+                height: 20%;
+                width: 100%;
+                background: hsl(10, 79%, 65%);
+                margin-bottom: 5%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .headerTitle {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    align-items:flex-start;
+                    justify-content:center;
+                    flex-direction: column;
+                    color: #fff;
+                    margin-left: 1em;
+                }
+                .headerLogo{
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    align-items:flex-start;
+                    justify-content:center;
+                    flex-direction: column;
+                    margin-right: 1em;
+                }
+            }
+            .composantCorps{
+                background: #fff;
+                height: 75%;
+                width: 100%;
+                @include verticalCenter;
+
+                .composantCorpsContainer{
+                    height: 90%;
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .spending{
+                        text-align: start;
+                        margin-left: 1em;
+                    }
+                    .graphe{
+                        width: 100%;
+                        height: 20em;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+
+                        .barContainer{
+                            width: 3em;
+                            height: 100%;
+
+                            .histogrameConatiner{
+                                width: 100%;
+                                height: 12em;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+
+                                .total{
+                                    color: #fff;
+                                    background:  hsl(25, 47%, 15%);
+                                    height: 2em;
+                                    width: 100%;
+                                    margin-bottom: 0.5em;
+                                    border-radius: 5px;
+                                    @include verticalCenter;
+                                    opacity: 0;
+                                }
+
+                                &:hover .total{
+                                    opacity: 1;
+                                }
+                            }
+                            .days{
+                                width: 100%;
+                                height: auto;
+                                @include verticalCenter;
+                            }
+                        }
+                    }
+                    .line{
+                        width: 100%;
+                        height: 2px;
+                        background:hsl(27, 66%, 92%);
+                    }
+                    .counts{
+                        width: 100%;
+                        height: auto;
+                        @include verticalCenter;
+
+                        .countContainer{
+                            width: 100%;
+                            height: 90%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .partOneOfCount{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                            }
+                            .partTwoOfCount{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
