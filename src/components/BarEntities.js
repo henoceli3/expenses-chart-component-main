@@ -6,6 +6,7 @@ const BarEntities = ({ bar}) => {
         width: "100%",
         height: +bar.amount + '%',
         background: "hsl(10, 79%, 65%)",
+        borderRadius:"5px"
     }
 
     return (
